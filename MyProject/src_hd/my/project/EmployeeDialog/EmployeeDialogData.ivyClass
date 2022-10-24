@@ -1,0 +1,8 @@
+EmployeeDialogData #class
+my.project.EmployeeDialog #namespace
+procurementData my.project.ProcurementData #field
+procurementData PERSISTENT #fieldModifier
+officeLocations List<my.project.Office> #field
+officeLocations PERSISTENT #fieldModifier
+genderTypes List<String> #field
+genderTypes PERSISTENT #fieldModifier

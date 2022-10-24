@@ -1,0 +1,14 @@
+ProcurementData #class
+my.project #namespace
+item String #field
+item PERSISTENT #fieldModifier
+deliveryDate Date #field
+deliveryDate PERSISTENT #fieldModifier
+comment String #field
+comment PERSISTENT #fieldModifier
+purchaser my.project.Person #field
+purchaser PERSISTENT #fieldModifier
+approval my.project.Approval #field
+approval PERSISTENT #fieldModifier
+amount Number #field
+amount PERSISTENT #fieldModifier

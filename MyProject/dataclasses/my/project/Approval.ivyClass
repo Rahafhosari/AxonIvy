@@ -1,0 +1,10 @@
+Approval #class
+my.project #namespace
+approval my.project.Person #field
+approval PERSISTENT #fieldModifier
+timestamp DateTime #field
+timestamp PERSISTENT #fieldModifier
+comment String #field
+comment PERSISTENT #fieldModifier
+status Boolean #field
+status PERSISTENT #fieldModifier

@@ -1,0 +1,13 @@
+Product #class
+true #isEntity
+my.project #namespace
+PRODUCT #dbTableName
+id Integer #field
+id Identifier #fieldComment
+id PERSISTENT #fieldModifier
+id ID #fieldModifier
+id GENERATED #fieldModifier
+Name String #field
+Name PERSISTENT #fieldModifier
+myDate Date #field
+myDate PERSISTENT #fieldModifier

@@ -1,0 +1,10 @@
+Office #class
+my.project #namespace
+name String #field
+name PERSISTENT #fieldModifier
+city String #field
+city PERSISTENT #fieldModifier
+country String #field
+country PERSISTENT #fieldModifier
+street String #field
+street PERSISTENT #fieldModifier

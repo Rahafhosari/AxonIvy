@@ -1,0 +1,74 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:ic="http://ivyteam.ch/jsf/component"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+<h:body>
+	<ui:composition template="/layouts/basic-8.xhtml">
+		<ui:define name="title">ApprovalDialog</ui:define>
+		<ui:define name="content">
+
+			<h3>
+			This is an <a href="https://developer.axonivy.com/doc/latest/designer-guide/user-interface/user-dialogs.html#html-dialogs">Html Dialog</a> 
+			implemented with JSF and <a href="http://primefaces.org/">Primefaces</a> as widget library
+			</h3>
+			
+			<h:form id="form">
+				<p:messages />
+				
+				<p:panelGrid columns="2" layout="grid" styleClass="ui-panelgrid-blank"
+					columnClasses="ui-g-12 ui-md- ui-lg-2, 
+						ui-g-12 ui-md-9 ui-lg-4, 
+						ui-g-12 ui-md-3 ui-lg-2, 
+						ui-g-12 ui-md-9 ui-lg-4">
+			
+					<p:outputLabel for="item" value="Item"/>
+					<p:inputText id="item" value="#{data.item}"></p:inputText>
+					
+					<p:outputLabel for="amount" value="Amount"/>
+					<p:inputNumber id="amount" value="#{data.amount}" symbol=" $" symbolPosition="s"></p:inputNumber>
+			
+					<p:outputLabel for="deliveryDate" value="Delivery Date"/>
+					<p:calendar id="deliveryDate" value="#{data.deliveryDate}" pattern="dd.MM.yyyy" size="10">
+						<f:convertDateTime pattern="dd.MM.yyyy" />
+					</p:calendar>
+					
+					<p:outputLabel for="comment" value="Comment"/>
+					<p:inputText id="comment" value="#{data.comment}"></p:inputText>
+					
+					<p:outputLabel for="first_name" value="Employee Name"/>
+					<p:inputText id="first_name" value="#{data.first_name}"></p:inputText>
+					
+					<p:outputLabel for="email" value="Email"/>
+					<p:inputText id="email" value="#{data.email}"></p:inputText>
+		
+					<p:outputLabel for="approvalApprovalFirst_name" value="Approved By"/>
+					<p:inputText id="approvalApprovalFirst_name" value="#{data.approval.approval.first_name}" requiredMessage="Enter Director Name" required="true"></p:inputText>		
+					
+					<p:outputLabel for="approvalTimestamp" value="Timestamp"/>
+					<p:calendar id="approvalTimestamp" value="#{data.approval.timestamp}" pattern="dd.MM.yyyy HH:mm" size="16">
+						<f:convertDateTime pattern="dd.MM.yyyy HH:mm" />
+					</p:calendar>
+					
+					<p:outputLabel for="approvalComment" value="Comment"/>
+					<p:inputText id="approvalComment" value="#{data.approval.comment}"></p:inputText>
+					
+					<p:outputLabel for="approvalStatus" value="Status"/>
+					<p:selectBooleanCheckbox id="approvalStatus" value="#{data.approval.status}" itemLabel="Approved" />
+	
+				</p:panelGrid>
+				
+				<br />
+				<div class="command-btns">
+					<p:commandButton process="amount" id="taxCalculator" actionListener="#{logic.taxCalculation}" value="Tax Calculator" update="amount" icon="fa fa-calculator" />
+					<p:commandButton id="proceed" actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
+				</div>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
+
+<!-- update="amout" -> only updates the amount not the whole form -->

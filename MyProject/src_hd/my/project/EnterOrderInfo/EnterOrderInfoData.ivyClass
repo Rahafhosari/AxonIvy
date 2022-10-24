@@ -1,0 +1,8 @@
+EnterOrderInfoData #class
+my.project.EnterOrderInfo #namespace
+procurementData my.project.ProcurementData #field
+procurementData PERSISTENT #fieldModifier
+genderTypes List<String> #field
+genderTypes PERSISTENT #fieldModifier
+officeLocations List<my.project.Office> #field
+officeLocations PERSISTENT #fieldModifier

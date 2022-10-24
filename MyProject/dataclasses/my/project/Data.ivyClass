@@ -1,0 +1,14 @@
+Data #class
+my.project #namespace
+product String #field
+product PERSISTENT #fieldModifier
+releaseDate Date #field
+releaseDate PERSISTENT #fieldModifier
+price Number #field
+price PERSISTENT #fieldModifier
+firstname String #field
+firstname PERSISTENT #fieldModifier
+lastname String #field
+lastname PERSISTENT #fieldModifier
+salutation String #field
+salutation PERSISTENT #fieldModifier

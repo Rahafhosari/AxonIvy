@@ -1,0 +1,105 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:ic="http://ivyteam.ch/jsf/component"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+<h:body>
+	<ui:composition template="/layouts/basic-8.xhtml">
+		<ui:define name="title">EmployeeInfo</ui:define>
+		<ui:define name="content">
+
+			<h3>
+			This is an <a href="https://developer.axonivy.com/doc/latest/designer-guide/user-interface/user-dialogs.html#html-dialogs">Html Dialog</a> 
+			implemented with JSF and <a href="http://primefaces.org/">Primefaces</a> as widget library
+			</h3>
+
+			<h:form id="form">
+				<p:messages />
+				<p:panelGrid columns="2" layout="grid" styleClass="ui-panelgrid-blank"
+					columnClasses="ui-g-12 ui-md-3 ui-lg-2, 
+						ui-g-12 ui-md-9 ui-lg-4, 
+						ui-g-12 ui-md-3 ui-lg-2, 
+						ui-g-12 ui-md-9 ui-lg-4">
+
+					<p:outputLabel for="procurementDataItem" value="Item"/>
+					<p:inputText id="procurementDataItem" value="#{data.procurementData.item}"></p:inputText>
+					
+					<p:outputLabel for="procurementDataDeliveryDate" value="Delivery Date"/>
+					<p:calendar id="procurementDataDeliveryDate" value="#{data.procurementData.deliveryDate}" pattern="dd.MM.yyyy" size="10">
+						<f:convertDateTime pattern="dd.MM.yyyy" />
+					</p:calendar>
+					
+					<p:outputLabel for="procurementDataComment" value="Comment"/>
+					<p:inputText id="procurementDataComment" value="#{data.procurementData.comment}"></p:inputText>
+					
+					<p:outputLabel for="procurementDataPurchaserFirst_name" value="First _ name"/>
+					<p:inputText id="procurementDataPurchaserFirst_name" value="#{data.procurementData.purchaser.first_name}"></p:inputText>
+					
+					<p:outputLabel for="procurementDataPurchaserLast_name" value="Last _ name"/>
+					<p:inputText id="procurementDataPurchaserLast_name" value="#{data.procurementData.purchaser.last_name}"></p:inputText>
+					
+					<p:outputLabel for="procurementDataPurchaserEmail" value="Email"/>
+					<p:inputText id="procurementDataPurchaserEmail" value="#{data.procurementData.purchaser.email}"></p:inputText>
+					
+					<p:outputLabel for="procurementDataPurchaserGender" value="Gender"/>
+					<p:inputText id="procurementDataPurchaserGender" value="#{data.procurementData.purchaser.gender}"></p:inputText>
+					
+					<p:outputLabel for="procurementDataPurchaserOfficeName" value="Name"/>
+					<p:inputText id="procurementDataPurchaserOfficeName" value="#{data.procurementData.purchaser.office.name}"></p:inputText>
+					
+					<p:outputLabel for="procurementDataPurchaserOfficeCity" value="City"/>
+					<p:inputText id="procurementDataPurchaserOfficeCity" value="#{data.procurementData.purchaser.office.city}"></p:inputText>
+					
+					<p:outputLabel for="procurementDataPurchaserOfficeCountry" value="Country"/>
+					<p:inputText id="procurementDataPurchaserOfficeCountry" value="#{data.procurementData.purchaser.office.country}"></p:inputText>
+					
+					<p:outputLabel for="procurementDataPurchaserOfficeStreet" value="Street"/>
+					<p:inputText id="procurementDataPurchaserOfficeStreet" value="#{data.procurementData.purchaser.office.street}"></p:inputText>
+					
+					<p:outputLabel for="procurementDataApprovalApprovalFirst_name" value="First _ name"/>
+					<p:inputText id="procurementDataApprovalApprovalFirst_name" value="#{data.procurementData.approval.approval.first_name}"></p:inputText>
+					
+					<p:outputLabel for="procurementDataApprovalApprovalLast_name" value="Last _ name"/>
+					<p:inputText id="procurementDataApprovalApprovalLast_name" value="#{data.procurementData.approval.approval.last_name}"></p:inputText>
+					
+					<p:outputLabel for="procurementDataApprovalApprovalEmail" value="Email"/>
+					<p:inputText id="procurementDataApprovalApprovalEmail" value="#{data.procurementData.approval.approval.email}"></p:inputText>
+					
+					<p:outputLabel for="procurementDataApprovalApprovalGender" value="Gender"/>
+					<p:inputText id="procurementDataApprovalApprovalGender" value="#{data.procurementData.approval.approval.gender}"></p:inputText>
+					
+					<p:outputLabel for="procurementDataApprovalApprovalOfficeName" value="Name"/>
+					<p:inputText id="procurementDataApprovalApprovalOfficeName" value="#{data.procurementData.approval.approval.office.name}"></p:inputText>
+					
+					<p:outputLabel for="procurementDataApprovalApprovalOfficeCity" value="City"/>
+					<p:inputText id="procurementDataApprovalApprovalOfficeCity" value="#{data.procurementData.approval.approval.office.city}"></p:inputText>
+					
+					<p:outputLabel for="procurementDataApprovalApprovalOfficeCountry" value="Country"/>
+					<p:inputText id="procurementDataApprovalApprovalOfficeCountry" value="#{data.procurementData.approval.approval.office.country}"></p:inputText>
+					
+					<p:outputLabel for="procurementDataApprovalApprovalOfficeStreet" value="Street"/>
+					<p:inputText id="procurementDataApprovalApprovalOfficeStreet" value="#{data.procurementData.approval.approval.office.street}"></p:inputText>
+					
+					<p:outputLabel for="procurementDataApprovalTimestamp" value="Timestamp"/>
+					<p:calendar id="procurementDataApprovalTimestamp" value="#{data.procurementData.approval.timestamp}" pattern="dd.MM.yyyy HH:mm" size="16">
+						<f:convertDateTime pattern="dd.MM.yyyy HH:mm" />
+					</p:calendar>
+					
+					<p:outputLabel for="procurementDataApprovalComment" value="Comment"/>
+					<p:inputText id="procurementDataApprovalComment" value="#{data.procurementData.approval.comment}"></p:inputText>
+					
+					<p:outputLabel for="procurementDataApprovalStatus" value="Status"/>
+					<p:selectBooleanCheckbox id="procurementDataApprovalStatus" value="#{data.procurementData.approval.status}" />
+
+				</p:panelGrid>
+				<br />
+				<div class="command-btns">
+					<p:commandButton id="proceed" actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
+				</div>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

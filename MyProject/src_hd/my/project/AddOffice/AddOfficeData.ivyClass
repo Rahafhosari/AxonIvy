@@ -1,0 +1,6 @@
+AddOfficeData #class
+my.project.AddOffice #namespace
+office my.project.Office #field
+office PERSISTENT #fieldModifier
+allOffices List<my.project.Office> #field
+allOffices PERSISTENT #fieldModifier

@@ -1,0 +1,72 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:ic="http://ivyteam.ch/jsf/component"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+<h:body>
+	<ui:composition template="/layouts/basic-8.xhtml">
+		<ui:define name="title">AddOffice</ui:define>
+		<ui:define name="content">
+
+			<h3>
+			Offices
+			</h3>
+
+			<h:form id="form">
+				<p:messages />
+				<p:fieldset legend="Add New Office Location">
+				<p:panelGrid columns="2" layout="grid" styleClass="ui-panelgrid-blank"
+					columnClasses="ui-g-12 ui-md-3 ui-lg-2, 
+						ui-g-12 ui-md-9 ui-lg-4, 
+						ui-g-12 ui-md-3 ui-lg-2, 
+						ui-g-12 ui-md-9 ui-lg-4">
+
+					<p:outputLabel for="officeName" value="Name"/>
+					<p:inputText id="officeName" value="#{data.office.name}" mask="Enter Name"></p:inputText>
+					
+					<p:outputLabel for="officeCity" value="City"/>
+					<p:inputText id="officeCity" value="#{data.office.city}"></p:inputText>
+					
+					<p:outputLabel for="officeCountry" value="Country"/>
+					<p:inputText id="officeCountry" value="#{data.office.country}"></p:inputText>
+					
+					<p:outputLabel for="officeStreet" value="Street"/>
+					<p:inputText id="officeStreet" value="#{data.office.street}"></p:inputText>
+					<div class="command-btns">
+							<p:commandButton id="proceed" actionListener="#{logic.addOffice}"
+								value="Proceed" update="form" icon="ui-icon-check" />
+						</div>
+					</p:panelGrid>
+				</p:fieldset>
+				<br />
+				 <p:fieldset legend="Offices List"> 
+				<p:dataTable border="1" id="products" var="office" value="#{data.allOffices}" rowKey="#{office}">
+					<p:column headerText="Office Name" id="column1">
+						<h:outputText value="#{office.name}" />
+					</p:column>
+					<p:column headerText="Office Street" id="column2">
+						<h:outputText value="#{office.street}" />
+					</p:column>
+					<p:column headerText="Office City" id="column3">
+						<h:outputText value="#{office.city}" />
+					</p:column>
+					<p:column headerText="Office Country" id="column4">
+						<h:outputText value="#{office.country}" />
+					</p:column>
+					<p:column headerText="Action" id="column5" >
+						<p:commandButton icon="fa fa-trash" value="Delete"
+							actionListener="#{logic.deleteOffice}">
+						</p:commandButton>
+						<p:commandButton icon="fa fa-bars" value="Edit"
+							actionListener="#{logic.editOffice}">
+						</p:commandButton>
+					</p:column>
+				</p:dataTable>
+			</p:fieldset> 
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

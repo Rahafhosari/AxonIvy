@@ -1,0 +1,8 @@
+EditOfficeData #class
+my.project.EditOffice #namespace
+office my.project.Office #field
+office PERSISTENT #fieldModifier
+selectedOffice my.project.Office #field
+selectedOffice PERSISTENT #fieldModifier
+selectedOfficeID Number #field
+selectedOfficeID PERSISTENT #fieldModifier

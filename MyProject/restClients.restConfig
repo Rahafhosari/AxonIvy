@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<restClients>
+    <restClient>
+        <uuid>8d853708-15ab-47a9-8ce1-ca6efa8d4b92</uuid>
+        <name>Get Gender Rest webservice</name>
+        <configuration>
+            <uri>https://api.genderize.io/</uri>
+            <property>
+                <name>JSON.Deserialization.FAIL_ON_UNKNOWN_PROPERTIES</name>
+                <value>false</value>
+                <password>false</password>
+            </property>
+            <feature>
+                <class>ch.ivyteam.ivy.rest.client.mapper.JsonFeature</class>
+            </feature>
+        </configuration>
+    </restClient>
+</restClients>

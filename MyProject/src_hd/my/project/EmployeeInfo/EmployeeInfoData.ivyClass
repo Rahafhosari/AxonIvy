@@ -1,0 +1,4 @@
+EmployeeInfoData #class
+my.project.EmployeeInfo #namespace
+procurementData my.project.ProcurementData #field
+procurementData PERSISTENT #fieldModifier

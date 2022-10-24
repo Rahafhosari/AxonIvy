@@ -1,0 +1,12 @@
+Person #class
+my.project #namespace
+first_name String #field
+first_name PERSISTENT #fieldModifier
+last_name String #field
+last_name PERSISTENT #fieldModifier
+email String #field
+email PERSISTENT #fieldModifier
+gender String #field
+gender PERSISTENT #fieldModifier
+office my.project.Office #field
+office PERSISTENT #fieldModifier
