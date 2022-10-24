@@ -1,0 +1,6 @@
+AddOrderData #class
+demo.project.AddOrder #namespace
+data demo.project.Data #field
+data PERSISTENT #fieldModifier
+controller main.com.demoproject.controllers.DemoController #field
+controller PERSISTENT #fieldModifier
